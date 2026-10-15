@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AIKN Courtside: Design Proposal</title>
+<style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; }
+  :root { --ink: #1b1c20; --muted: #5c5f66; --line: #ddd6ca; --orange: #ef6a26; --soft: #f6f2ea;
+    --red: #c8141a; --green: #0b7a38; --yellow: #f2b705; --blue: #0d47c9; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; color: var(--ink); font-family: "Segoe UI", system-ui, sans-serif; font-size: 10.2pt; line-height: 1.5; background: #fff; }
+  h1, h2, h3 { font-family: "Bahnschrift", "Segoe UI", sans-serif; letter-spacing: 0.02em; margin: 0; }
+  h1 { font-size: 34pt; line-height: 1; }
+  h1 span { color: var(--orange); }
+  h2 { font-size: 15pt; margin: 0 0 3mm; padding-top: 1mm; display: flex; gap: 3mm; align-items: baseline; }
+  h2 .num { color: var(--orange); }
+  h3 { font-size: 11pt; margin: 4mm 0 1.5mm; }
+  p { margin: 0 0 2.6mm; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 0.6mm solid var(--ink); padding-bottom: 4mm; margin-bottom: 5mm; }
+  .kicker { font-size: 9pt; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2mm; }
+  .who { text-align: right; font-size: 9.5pt; line-height: 1.45; }
+  .who b { font-family: "Bahnschrift", sans-serif; font-size: 12pt; letter-spacing: 0.04em; }
+  img { display: block; width: 100%; border-radius: 1.2mm; }
+  figure { margin: 0 0 3mm; }
+  figcaption { font-size: 8.4pt; color: var(--muted); margin-top: 1.2mm; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .glance { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 4mm 0; }
+  .glance div { background: var(--ink); color: #fff; border-radius: 1.2mm; padding: 3mm; }
+  .glance .n { font-family: "Bahnschrift", sans-serif; font-size: 20pt; color: var(--yellow); line-height: 1; }
+  .glance .l { font-size: 8.4pt; color: #e4e4e4; margin-top: 1mm; line-height: 1.3; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.9pt; margin: 1mm 0 3mm; }
+  th { text-align: left; font-family: "Bahnschrift", sans-serif; font-weight: 600; letter-spacing: 0.03em; background: var(--soft); border-bottom: 0.4mm solid var(--ink); padding: 1.6mm 2mm; }
+  td { border-bottom: 0.25mm solid var(--line); padding: 1.2mm 2mm; vertical-align: top; }
+  td:first-child { font-weight: 600; white-space: nowrap; }
+  .sw { display: inline-block; width: 3.4mm; height: 3.4mm; border-radius: 0.6mm; vertical-align: -0.5mm; margin-right: 1.5mm; }
+  .note { background: var(--soft); border-left: 1mm solid var(--orange); padding: 2.4mm 3mm; font-size: 9.2pt; margin: 2mm 0 3mm; }
+  ul { margin: 0 0 2.6mm; padding-left: 5mm; }
+  li { margin-bottom: 1mm; }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 9mm; margin-bottom: 2mm; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0.2mm; width: 6mm; height: 6mm; border-radius: 50%; background: var(--orange); color: #fff; font-family: "Bahnschrift", sans-serif; font-size: 9pt; display: flex; align-items: center; justify-content: center; }
+  .steps b { font-family: "Bahnschrift", sans-serif; letter-spacing: 0.02em; }
+  .small { font-size: 8.6pt; color: var(--muted); }
+  .plan { display: grid; grid-template-columns: 56mm 1fr; gap: 5mm; align-items: start; }
+  svg text { font-family: "Segoe UI", sans-serif; }
+  .sign { margin-top: 6mm; border-top: 0.3mm solid var(--line); padding-top: 3mm; font-size: 9pt; color: var(--muted); }
+  @media screen { body { background: #888; } .page { width: 210mm; height: 297mm; padding: 16mm; background: #fff; margin: 0 0 4mm; overflow: visible; outline: 1px solid red; } }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1: COVER ============ -->
+<section class="page">
+  <div class="cover-top">
+    <div>
+      <div class="kicker">ALU Courtside Seating Design Challenge · Design proposal</div>
+      <h1>AIKN <span>COURTSIDE</span></h1>
+    </div>
+    <div class="who"><b>NTARE GAMA ALLAN</b><br>Individual entry · Volleyball club<br>a.ntare@alustudent.com<br>October 2026</div>
+  </div>
+  <figure>
+    <img src="img/hero_day.jpg" alt="Proposed AIKN Courtside">
+    <figcaption>Proposed AIKN Courtside: four colour-coded concrete stands along both sidelines of the renovated court, with concrete end walls, floodlights and planting.</figcaption>
+  </figure>
+  <div class="glance">
+    <div><div class="n">160</div><div class="l">fixed seats in 4 named sections</div></div>
+    <div><div class="n">+4</div><div class="l">level wheelchair bays with companion space</div></div>
+    <div><div class="n">8–10</div><div class="l">weeks indicative build time</div></div>
+    <div><div class="n">0</div><div class="l">demolition: the existing court slab is reused</div></div>
+  </div>
+  <h2><span class="num">—</span> Summary</h2>
+  <p>The AIKN basketball court is a well-used outdoor space on campus, but it has nowhere to sit. Players' friends, teammates and visitors stand on bare earth at the edge of the slab. <b>AIKN Courtside</b> adds permanent, safe and colourful seating that turns the court into a small arena for practice, club games and campus events.</p>
+  <p>The design places <b>four stepped concrete stands</b>, two on each sideline, each with <b>40 moulded seats in 4 rows</b>. The sections are named <b>Imanzi</b>, <b>Jamaica</b>, <b>Imena</b> and <b>Intare</b>, and each has its own seat colour, so every stand has an identity students can rally behind. Aisle stairs with handrails divide the stands, guardrails protect every raised edge, and new LED floodlights let the court be used safely after dark. The end walls carry carved portraits of Fred Swaniker and H.E. Paul Kagame with their words, and an illuminated ALU / AIKN COURT sign on the outside. The stands are built from durable, locally available materials, reuse the existing slab, and need very little maintenance.</p>
+</section>
+
+<!-- ============ PAGE 2: SITE + CONCEPT ============ -->
+<section class="page">
+  <h2><span class="num">01</span> The site today</h2>
+  <div class="grid2">
+    <figure><img src="img/site_image_05.jpg" alt="Existing court"><figcaption>Existing court: a concrete slab with faded lines and steel hoops. There is no seating.</figcaption></figure>
+    <figure><img src="img/site_image_01.jpg" alt="Court edge"><figcaption>Court edge: worn grass and bare soil where spectators stand, with mature trees and a fence along the hillside.</figcaption></figure>
+  </div>
+  <p>Field visits found a sound but tired court:</p>
+  <ul>
+    <li><b>No spectator seating.</b> People stand or sit on the ground, which wears the grass to bare soil and turns muddy in the rainy season.</li>
+    <li><b>Faded markings and a weathered surface.</b> The court lines are hard to read.</li>
+    <li><b>Limited lighting.</b> Two street-type poles do not evenly light the playing area for evening use.</li>
+    <li><b>Strengths to keep:</b> a level slab in good condition, mature shade trees, an existing paved path to the court, and an open view over the Kigali hills.</li>
+  </ul>
+
+  <h2><span class="num">02</span> Design concept</h2>
+  <p>Courtside seating should feel like part of the court, not something added beside it. The stands sit 1.8 m outside each sideline so spectators are close to the game, and the stepped rows lift every seat above the one in front for a clear view. A gap of about 3.7 m between the two stands on each side holds the aisle stairs and the team chairs, and keeps sight lines and circulation open at half court.</p>
+  <table>
+    <tr><th>Section</th><th>Position</th><th>Seat colour</th><th>Seats</th></tr>
+    <tr><td><span class="sw" style="background:var(--red)"></span>Imanzi</td><td>Left side, far end</td><td>Red</td><td>40</td></tr>
+    <tr><td><span class="sw" style="background:var(--green)"></span>Jamaica</td><td>Left side, near end</td><td>Green</td><td>40</td></tr>
+    <tr><td><span class="sw" style="background:var(--yellow)"></span>Imena</td><td>Right side, far end</td><td>Yellow</td><td>40</td></tr>
+    <tr><td><span class="sw" style="background:var(--blue)"></span>Intare</td><td>Right side, near end</td><td>Blue</td><td>40</td></tr>
+  </table>
+  <p>Each name is cast into the 0.8 m concrete front face of its stand. The seat colours pick up the court's new geometric mural, so the court and its seating read as one design. Concrete walls behind each basket (15 m × 3.4 m) stop loose balls and give the court a clear edge.</p>
+</section>
+
+<!-- ============ PAGE 3: LAYOUT & CAPACITY ============ -->
+<section class="page">
+  <h2><span class="num">03</span> Layout and seating capacity</h2>
+  <div class="plan">
+    <figure><img src="img/plan_top.jpg" alt="Top-down plan"><figcaption>Top-down view (far end at the top). Red and green stands on the left, yellow and blue on the right.</figcaption></figure>
+    <div>
+      <table>
+        <tr><th>Element</th><th>Dimension</th></tr>
+        <tr><td>Court</td><td>15.0 × 28.0 m (existing slab)</td></tr>
+        <tr><td>Stand position</td><td>Front face 1.8 m outside the sideline</td></tr>
+        <tr><td>Stand length</td><td>7.9 m per section (10 seats at 0.75 m centres)</td></tr>
+        <tr><td>Stand depth</td><td>3.4 m (4 rows × 0.85 m)</td></tr>
+        <tr><td>Rows</td><td>0.85 m tread, 0.40 m rise; first row 0.80 m above ground</td></tr>
+        <tr><td>Top tier</td><td>2.00 m above ground, with a 1.10 m guardrail</td></tr>
+        <tr><td>Gap between stands</td><td>About 3.7 m (aisle stair 1.4 m wide + circulation)</td></tr>
+        <tr><td>Aisle stairs</td><td>10 steps, 0.20 m rise × 0.34 m going, handrails on both sides</td></tr>
+        <tr><td>End walls</td><td>15.0 × 3.4 × 0.4 m, 2.2 m behind each baseline (to centre)</td></tr>
+        <tr><td>Floodlights</td><td>6 LED luminaires on 7.5 m poles, 3 per side</td></tr>
+      </table>
+      <h3>Capacity</h3>
+      <table>
+        <tr><th>Type</th><th>Places</th></tr>
+        <tr><td>Fixed seats</td><td><b>160</b> (4 sections × 4 rows × 10)</td></tr>
+        <tr><td>Wheelchair bays</td><td><b>4</b> level bays on the apron at the open ends of the stands, 0.9 × 1.4 m each, with a companion seat</td></tr>
+        <tr><td>Team areas</td><td>2 courtside coach / bench positions at half court</td></tr>
+      </table>
+      <div class="note"><b>Capacity option.</b> Seats are set at generous 0.75 m centres for comfort, bags and the heat of the day. At the usual stadium spacing of 0.50 m, the same footprint holds 15 seats per row: <b>240 seats</b> in total, with no change to the concrete.</div>
+    </div>
+  </div>
+
+  <h3>Section through a stand</h3>
+  <svg viewBox="-1.4 -3.75 8.2 4.35" style="width:100%;height:auto;max-height:56mm">
+    <defs>
+      <marker id="d" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 1 L10 5 L0 9z" fill="#333"/></marker>
+      <pattern id="hatch" width="0.12" height="0.12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="0.12" stroke="#b9b1a3" stroke-width="0.025"/></pattern>
+      <pattern id="mesh" width="0.1" height="0.1" patternUnits="userSpaceOnUse"><path d="M0 0H0.1V0.1" fill="none" stroke="#555" stroke-width="0.012"/></pattern>
+    </defs>
+    <rect x="-1.4" y="0" width="8.2" height="0.5" fill="#e3ddd2"/>
+    <rect x="-1.4" y="-0.04" width="1.4" height="0.04" fill="#ef6a26"/>
+    <line x1="-1.4" y1="0" x2="6.8" y2="0" stroke="#333" stroke-width="0.02"/>
+    <rect x="1.75" y="0" width="0.5" height="0.28" fill="#bdb6aa"/><rect x="5.0" y="0" width="0.5" height="0.28" fill="#bdb6aa"/>
+    <polygon points="1.8,0 1.8,-0.8 2.65,-0.8 2.65,-1.2 3.5,-1.2 3.5,-1.6 4.35,-1.6 4.35,-2.0 5.2,-2.0 5.2,0" fill="url(#hatch)" stroke="#555" stroke-width="0.025"/>
+    <polyline points="1.8,0 1.8,-0.8 2.65,-0.8 2.65,-1.2 3.5,-1.2 3.5,-1.6 4.35,-1.6 4.35,-2.0 5.2,-2.0 5.2,0" fill="none" stroke="#7c766b" stroke-width="0.09"/>
+    <g stroke="#0d47c9" stroke-width="0.055" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.12,-1.18 L2.16,-1.22 L2.53,-1.21 L2.60,-1.30 L2.63,-1.62"/>
+      <path d="M2.97,-1.58 L3.01,-1.62 L3.38,-1.61 L3.45,-1.70 L3.48,-2.02"/>
+      <path d="M3.82,-1.98 L3.86,-2.02 L4.23,-2.01 L4.30,-2.10 L4.33,-2.42"/>
+      <path d="M4.62,-2.38 L4.66,-2.42 L5.03,-2.41 L5.10,-2.50 L5.13,-2.82"/>
+    </g>
+    <g fill="#0d47c9"><rect x="2.30" y="-1.21" width="0.08" height="0.41"/><rect x="3.15" y="-1.61" width="0.08" height="0.41"/><rect x="4.00" y="-2.01" width="0.08" height="0.41"/><rect x="4.80" y="-2.41" width="0.08" height="0.41"/></g>
+    <rect x="5.12" y="-3.1" width="0.06" height="1.1" fill="#222"/>
+    <rect x="5.0" y="-3.05" width="0.12" height="1.0" fill="url(#mesh)"/>
+    <line x1="4.95" y1="-3.1" x2="5.2" y2="-3.1" stroke="#222" stroke-width="0.05"/>
+    <rect x="5.22" y="-0.12" width="0.22" height="0.12" fill="#fff" stroke="#555" stroke-width="0.02"/>
+    <g stroke="#333" stroke-width="0.018" fill="none">
+      <line x1="0" y1="0.32" x2="1.8" y2="0.32" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="1.8" y1="0.32" x2="5.2" y2="0.32" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="1.6" y1="0" x2="1.6" y2="-0.8" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="2.45" y1="-0.8" x2="2.45" y2="-1.2" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="1.8" y1="-2.55" x2="2.65" y2="-2.55" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="5.95" y1="0" x2="5.95" y2="-2.0" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="5.95" y1="-2.0" x2="5.95" y2="-3.1" marker-start="url(#d)" marker-end="url(#d)"/>
+      <line x1="1.8" y1="-2.55" x2="1.8" y2="-0.85" stroke-dasharray="0.05 0.05"/>
+      <line x1="2.65" y1="-2.55" x2="2.65" y2="-1.25" stroke-dasharray="0.05 0.05"/>
+      <line x1="5.25" y1="-2.0" x2="6.05" y2="-2.0" stroke-dasharray="0.05 0.05"/>
+    </g>
+    <g font-size="0.17" fill="#222" text-anchor="middle">
+      <text x="0.9" y="0.52">1.80 clear zone</text>
+      <text x="3.5" y="0.52">3.40 stand depth (4 rows)</text>
+      <text transform="translate(1.5 -0.4) rotate(-90)">0.80</text>
+      <text transform="translate(2.36 -1.0) rotate(-90)">0.40</text>
+      <text x="2.22" y="-2.62">0.85 tread</text>
+      <text transform="translate(6.12 -1.0) rotate(-90)">2.00</text>
+      <text transform="translate(6.12 -2.55) rotate(-90)">1.10</text>
+    </g>
+    <g font-size="0.15" fill="#444">
+      <text x="-1.3" y="-0.15" fill="#ef6a26" font-weight="600">COURT / SIDELINE</text>
+      <text x="2.75" y="-2.95">UV-stable PP shell seat,</text>
+      <text x="2.75" y="-2.77">galvanised bracket, 0.75 m c/c</text>
+      <text x="3.0" y="-0.55">RC tread 125 mm on</text>
+      <text x="3.0" y="-0.38">compacted fill</text>
+      <text x="5.05" y="-3.25" text-anchor="end">1.1 m guardrail, mesh infill</text>
+      <text x="4.7" y="0.2" font-size="0.13">fall 1:100 → drain</text>
+      <text x="1.85" y="0.2" font-size="0.13">strip footings + 200 mm block walls</text>
+    </g>
+  </svg>
+  <p class="small">Section A–A through the Intare stand. Dimensions in metres. Indicative; final sizes to be confirmed by a structural engineer.</p>
+</section>
+
+<!-- ============ PAGE 4: MATERIALS + CONSTRUCTION ============ -->
+<section class="page">
+  <h2><span class="num">04</span> Materials</h2>
+  <table>
+    <tr><th>Element</th><th>Material</th><th>Why</th></tr>
+    <tr><td>Stand structure</td><td>200 mm concrete-block perimeter and riser walls on reinforced strip footings; compacted fill (excavated soil/murram) inside; 125 mm reinforced-concrete treads (C25/30, mesh-reinforced)</td><td>Strong and low-maintenance, built with skills and materials found in Kigali. Filling the core with soil uses far less cement than solid concrete.</td></tr>
+    <tr><td>Tread finish</td><td>Broom-finished concrete, 1:100 fall to the rear, 50 mm yellow anti-slip nosing strip on every step edge</td><td>Grip in wet weather; edges are visible in low light; rain drains away from seats.</td></tr>
+    <tr><td>Seats</td><td>Moulded polypropylene/HDPE stadium shell seats, UV-stabilised and colour-fast, with drain holes; mounted on hot-dip galvanised steel brackets with stainless-steel anchors</td><td>Weatherproof, comfortable, quick to dry; each seat can be replaced on its own. Recycled-content options are available.</td></tr>
+    <tr><td>Handrails and guardrails</td><td>48 mm hot-dip galvanised steel tube, powder-coated black; welded-mesh infill panels on guardrails</td><td>Rust-resistant for decades; the mesh stops children slipping through.</td></tr>
+    <tr><td>Section names</td><td>Letters cast into or stencilled on the concrete front face, sealed</td><td>Cannot be peeled off or stolen; the identity stays.</td></tr>
+    <tr><td>End walls</td><td>Rendered concrete block, 3.4 m high, anti-graffiti sealer</td><td>Ball stop and wind break; a surface for future murals.</td></tr>
+    <tr><td>Court surface</td><td>Crack repair and an acrylic sports coating in the geometric colour scheme, with new lines</td><td>Renews the existing slab instead of replacing it.</td></tr>
+    <tr><td>Lighting</td><td>6 LED floodlights with asymmetric optics on 7.5 m galvanised poles; timer switching</td><td>Even light (target ≈200 lux for recreational play) with little glare or spill; low energy use.</td></tr>
+  </table>
+
+  <h2><span class="num">05</span> Construction approach</h2>
+  <p>The stands are simple, robust masonry and concrete work that a local contractor can build in about <b>8–10 weeks</b>, alongside ALU Facilities. Building one side at a time keeps part of the area usable for as long as possible.</p>
+  <ol class="steps">
+    <li><b>Survey and approvals (week 1).</b> Confirm levels and soil conditions, set out the stands from the sidelines, and have a structural engineer and ALU Facilities review the design.</li>
+    <li><b>Groundworks (weeks 2–3).</b> Excavate and cast the strip footings, and lay the block perimeter and riser walls for the first side.</li>
+    <li><b>Tiers (weeks 3–5).</b> Backfill and compact in layers, then cast the reinforced treads and aisle stairs bay by bay, with drainage falls and a rear channel drain.</li>
+    <li><b>Second side and end walls (weeks 4–6).</b> Repeat for the other side; build and render the end walls.</li>
+    <li><b>Court renewal (weeks 6–7).</b> Repair cracks and apply the acrylic coating and new lines, while the concrete cures. Seats and rails are fitted only after the treads reach working strength.</li>
+    <li><b>Fit-out and handover (weeks 8–10).</b> Install seats, handrails, guardrails, section names and floodlights; plant the borders; carry out a final safety inspection.</li>
+  </ol>
+  <p class="small">The timeline is indicative and depends on contractor availability, weather (avoiding the heaviest rainy weeks for concrete work) and approvals. Students can help with the mural, section names and planting, so they share ownership of the result.</p>
+</section>
+
+<!-- ============ PAGE 5: SAFETY, DURABILITY, SUSTAINABILITY ============ -->
+<section class="page">
+  <h2><span class="num">06</span> Safety</h2>
+  <ul>
+    <li><b>Comfortable, regular steps.</b> 0.40 m risers with 0.85 m treads for seating rows; separate aisle stairs with a 0.20 m rise and 0.34 m going, so nobody has to climb the seating rows.</li>
+    <li><b>Handrails and guardrails.</b> Handrails on both sides of every aisle stair. A 1.1 m guardrail with mesh infill runs along the back of each stand (the top tier is 2.0 m above ground) and down both open sides.</li>
+    <li><b>Slip resistance and visibility.</b> Broom-finished treads, contrasting yellow nosings on every edge, and floodlighting for safe movement after dark.</li>
+    <li><b>Clear zones.</b> The stands are 1.8 m clear of the sidelines and the end walls are 2.2 m behind the baselines, giving players run-off space. <i>For competition use, FIBA asks for at least 2 m of clear space; if the site allows, the stands can move out by 0.2 m.</i></li>
+    <li><b>Exits.</b> Every seat is within a few metres of an aisle stair or an open end, with level routes to the existing paved path.</li>
+    <li><b>Accessibility.</b> Four level wheelchair bays with companion space at the ends of the stands, reached from the paved path without steps.</li>
+    <li><b>Rounded details.</b> Chamfered concrete edges, capped tube ends and recessed fixings reduce injury risk.</li>
+  </ul>
+
+  <h2><span class="num">07</span> Durability and maintenance</h2>
+  <ul>
+    <li>Reinforced concrete with 30 mm cover and good curing; drainage falls stop water from standing on the treads.</li>
+    <li>Hot-dip galvanised and powder-coated steel resists rust in Kigali's two rainy seasons.</li>
+    <li>UV-stabilised, colour-fast seats are designed for years outdoors. They are bolted individually, so a damaged seat is a five-minute swap, not a rebuild.</li>
+    <li>An anti-graffiti sealer on the walls and front faces makes cleaning easy.</li>
+    <li><b>Simple maintenance plan:</b> a monthly check of rails, anchors and seats; cleaning drains before each rainy season; repainting nosings and lines yearly; recoating the court about every 5 years.</li>
+  </ul>
+
+  <h2><span class="num">08</span> Sustainability</h2>
+  <ul>
+    <li><b>Reuse, don't rebuild.</b> The existing court slab, hoop positions, paved path and mature trees are kept. No demolition waste.</li>
+    <li><b>Less cement.</b> The tiers are soil-filled inside block walls, with thin concrete treads, instead of solid concrete. Soil excavated for the footings is reused as fill, and cement replacements (such as fly ash or slag blends) can be used where suppliers have them.</li>
+    <li><b>Local materials and labour.</b> Blocks, aggregate, steelwork and seats can come from Kigali suppliers and fabricators, which cuts transport and supports local businesses.</li>
+    <li><b>Low-energy lighting.</b> LED floodlights on timers, with an option for solar-powered fittings.</li>
+    <li><b>Water and planting.</b> Rainwater from the treads and court drains to planted beds of native shrubs around the stands. These replace today's bare, eroded soil.</li>
+    <li><b>Recyclable at end of life.</b> Polypropylene seats and steel rails can be recycled; recycled-content seats are preferred.</li>
+  </ul>
+</section>
+
+<!-- ============ PAGE: END-WALL ART + SIGNAGE ============ -->
+<section class="page">
+  <h2><span class="num">09</span> End walls: art and signage</h2>
+  <p>The two 15 m end walls behind the baskets give the court its identity. The side facing the court carries carved relief art; the outside face carries an illuminated ALU sign seen from the paths around the court.</p>
+  <div class="grid2">
+    <figure><img src="img/wall_swaniker.jpg" alt="Swaniker wall"><figcaption>Far wall: relief portrait of Fred Swaniker, founder of ALU, with the blackletter inscription <i>"it's about who you're..."</i>.</figcaption></figure>
+    <figure><img src="img/wall_kagame.jpg" alt="Kagame wall"><figcaption>Near wall: relief portrait of H.E. Paul Kagame with the inscription <i>"dare to be more..."</i>.</figcaption></figure>
+    <figure><img src="img/led_day.jpg" alt="LED sign by day"><figcaption>Outside face by day: <b>ALU</b> and <b>AIKN COURT</b>, readable in sunlight.</figcaption></figure>
+    <figure><img src="img/led_night.jpg" alt="LED sign at night"><figcaption>At night the sign glows and switches on with the floodlights.</figcaption></figure>
+  </div>
+  <table>
+    <tr><th>Element</th><th>How it is made</th></tr>
+    <tr><td>Portraits</td><td>Relief cut into a 25 mm sand-cement render layer using stencils and grinding, sealed with a clear anti-graffiti coat. Two low-glare LED uplights per wall light them after dark.</td></tr>
+    <tr><td>Inscriptions</td><td>Blackletter (Gothic) lettering about 0.35 m tall, cut into the render like an engraved stone inscription; names and titles in Roman capitals under each portrait.</td></tr>
+    <tr><td>LED sign</td><td>IP65 outdoor LED letter modules set flush in a recessed navy channel in the wall, with a steel frame. "ALU" in white over a red line in ALU's colours; "AIKN COURT" in a tiger-to-zebra stripe pattern. On a timer with the floodlights.</td></tr>
+  </table>
+  <p class="small">The portraits and quotes are shown for presentation. Before construction, permission to use the likenesses and the full quotations will be requested from ALU communications and the relevant offices.</p>
+</section>
+
+<!-- ============ PAGE 6: VISUALS + NEXT STEPS ============ -->
+<section class="page">
+  <h2><span class="num">10</span> How it will feel</h2>
+  <div class="grid2">
+    <figure><img src="img/stand_day.jpg" alt="Intare stand"><figcaption>The Intare stand: front-row seats, guardrails and aisle stairs.</figcaption></figure>
+    <figure><img src="img/hero_night.jpg" alt="Court at night"><figcaption>At night: six LED floodlights light the court and stands for evening games.</figcaption></figure>
+    <figure><img src="img/stand_profile.jpg" alt="Stand profile"><figcaption>The stepped profile and side guardrails, seen from the end of the stand.</figcaption></figure>
+    <figure><img src="img/courtside_night.jpg" alt="Courtside at night"><figcaption>A courtside view under the lights.</figcaption></figure>
+  </div>
+  <p>The design was modelled at full scale in <b>Unity 6</b> (1 unit = 1 m) to test sight lines, step sizes and lighting. The model includes a 90-second voiced story film (an ALU host and two investors touring the court, two student players, two coaches, a narrator, day turning to night as the floodlights and sign switch on) and an interactive mode where visitors can play on the court and switch between day and night. It shows how the court could become a social heart of campus.</p>
+
+  <h2><span class="num">11</span> Assumptions and next steps</h2>
+  <ul>
+    <li>Dimensions come from the field visit and the 3D model, and should be confirmed with a measured survey.</li>
+    <li>Footings, reinforcement and guardrail fixings should be designed and signed off by a structural engineer.</li>
+    <li>A cost estimate can be prepared with ALU Facilities once the layout is approved. The design can also be phased: one side first (80 seats), then the second side.</li>
+  </ul>
+  <div class="sign">Submitted by <b>NTARE GAMA Allan</b> (individual entry, Volleyball club) for the ALU Courtside Seating Design Challenge.</div>
+</section>
+
+<script>const p = new URLSearchParams(location.search).get("p"); if (p) document.querySelectorAll(".page").forEach((s, i) => { if (i + 1 != p) s.style.display = "none"; });</script>
+</body>
+</html>
