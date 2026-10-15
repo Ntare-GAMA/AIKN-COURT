@@ -46,6 +46,8 @@
   .small { font-size: 8.6pt; color: var(--muted); }
   .plan { display: grid; grid-template-columns: 56mm 1fr; gap: 5mm; align-items: start; }
   svg text { font-family: "Segoe UI", sans-serif; }
+  .links { display: flex; flex-wrap: wrap; gap: 1.5mm 6mm; background: #1b1c20; color: #fff; border-radius: 1.2mm; padding: 2.4mm 3.5mm; margin: 0 0 4mm; font-size: 9pt; }
+  .links a { color: #ffb000; text-decoration: none; }
   .sign { margin-top: 6mm; border-top: 0.3mm solid var(--line); padding-top: 3mm; font-size: 9pt; color: var(--muted); }
   @media screen { body { background: #888; } .page { width: 210mm; height: 297mm; padding: 16mm; background: #fff; margin: 0 0 4mm; overflow: visible; outline: 1px solid red; } }
 </style>
@@ -62,7 +64,7 @@
     <div class="who"><b>NTARE GAMA ALLAN</b><br>Individual entry · Volleyball club<br>a.ntare@alustudent.com<br>October 2026</div>
   </div>
   <figure>
-    <img src="img/hero_day.jpg" alt="Proposed AIKN Courtside">
+    <img src="img/hero_day.jpg" alt="Proposed AIKN Courtside" style="height:78mm;object-fit:cover;object-position:center 35%">
     <figcaption>Proposed AIKN Courtside: four colour-coded concrete stands along both sidelines of the renovated court, with concrete end walls, floodlights and planting.</figcaption>
   </figure>
   <div class="glance">
@@ -71,6 +73,7 @@
     <div><div class="n">8–10</div><div class="l">weeks indicative build time</div></div>
     <div><div class="n">0</div><div class="l">demolition: the existing court slab is reused</div></div>
   </div>
+  <div class="links"><span><b>Author:</b> NTARE GAMA Allan</span><span><b>&#9654; Concept film:</b> <a href="https://youtu.be/px5tGWSrJ9I">youtu.be/px5tGWSrJ9I</a></span><span><b>Project files:</b> <a href="https://github.com/Ntare-GAMA/AIKN-COURT/">github.com/Ntare-GAMA/AIKN-COURT</a></span></div>
   <h2><span class="num">—</span> Summary</h2>
   <p>The AIKN basketball court is a well-used outdoor space on campus, but it has nowhere to sit. Players' friends, teammates and visitors stand on bare earth at the edge of the slab. <b>AIKN Courtside</b> adds permanent, safe and colourful seating that turns the court into a small arena for practice, club games and campus events.</p>
   <p>The design places <b>four stepped concrete stands</b>, two on each sideline, each with <b>40 moulded seats in 4 rows</b>. The sections are named <b>Imanzi</b>, <b>Jamaica</b>, <b>Imena</b> and <b>Intare</b>, and each has its own seat colour, so every stand has an identity students can rally behind. Aisle stairs with handrails divide the stands, guardrails protect every raised edge, and new LED floodlights let the court be used safely after dark. The end walls carry carved portraits of Fred Swaniker and H.E. Paul Kagame with their words, and an illuminated ALU / AIKN COURT sign on the outside. The stands are built from durable, locally available materials, reuse the existing slab, and need very little maintenance.</p>
@@ -282,6 +285,7 @@
     <figure><img src="img/courtside_night.jpg" alt="Courtside at night"><figcaption>A courtside view under the lights.</figcaption></figure>
   </div>
   <p>The design was modelled at full scale in <b>Unity 6</b> (1 unit = 1 m) to test sight lines, step sizes and lighting. The model includes a 90-second voiced story film (an ALU host and two investors touring the court, two student players, two coaches, a narrator, day turning to night as the floodlights and sign switch on) and an interactive mode where visitors can play on the court and switch between day and night. It shows how the court could become a social heart of campus.</p>
+  <div class="links"><span><b>&#9654; Watch the 90-second concept film:</b> <a href="https://youtu.be/px5tGWSrJ9I">https://youtu.be/px5tGWSrJ9I</a></span><span><b>Unity project and source files:</b> <a href="https://github.com/Ntare-GAMA/AIKN-COURT/">https://github.com/Ntare-GAMA/AIKN-COURT/</a></span><span><b>Author:</b> NTARE GAMA Allan</span></div>
 
   <h2><span class="num">11</span> Assumptions and next steps</h2>
   <ul>
@@ -289,7 +293,7 @@
     <li>Footings, reinforcement and guardrail fixings should be designed and signed off by a structural engineer.</li>
     <li>A cost estimate can be prepared with ALU Facilities once the layout is approved. The design can also be phased: one side first (80 seats), then the second side.</li>
   </ul>
-  <div class="sign">Submitted by <b>NTARE GAMA Allan</b> (individual entry, Volleyball club) for the ALU Courtside Seating Design Challenge.</div>
+  <div class="sign">Submitted by <b>NTARE GAMA Allan</b> (individual entry, Volleyball club) for the ALU Courtside Seating Design Challenge.<br>Concept film: <a href="https://youtu.be/px5tGWSrJ9I">https://youtu.be/px5tGWSrJ9I</a> · Project files: <a href="https://github.com/Ntare-GAMA/AIKN-COURT/">https://github.com/Ntare-GAMA/AIKN-COURT/</a></div>
 </section>
 
 <script>const p = new URLSearchParams(location.search).get("p"); if (p) document.querySelectorAll(".page").forEach((s, i) => { if (i + 1 != p) s.style.display = "none"; });</script>
